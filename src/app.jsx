@@ -18,6 +18,7 @@ class App extends Component {
   // 请勿修改此函数
   render () {
     return (
+      // 通过 Provider 组件将 Redux 的 store 传递给子组件，相当于进行全局注入
       <Provider store={store}>
         {this.props.children}
       </Provider>

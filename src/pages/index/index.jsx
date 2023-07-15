@@ -37,15 +37,15 @@ function Index() {
         latitude='23.099994'
         scale='14'
         markers={markers}
-        onMarkerTap={(e) => {
+        onMarkerTap={() => {
           console.log("点击");
           setShow(true);
         }}
-        onCalloutTap={(e) => {
+        onCalloutTap={() => {
           console.log("点击");
           setShow(true);
         }}
-        onLabelTap={(e) => {
+        onLabelTap={() => {
           console.log("点击");
           setShow(true);
         }}
