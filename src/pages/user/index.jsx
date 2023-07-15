@@ -1,20 +1,14 @@
 import { Component } from "react";
-import { connect } from "react-redux";
-import { View, Button, Text } from "@tarojs/components";
+import { View, Text } from "@tarojs/components";
 import {
   Cell,
-  CellGroup,
-  Toast,
   NavBar,
-  MiniNavBar,
-  Icon,
   Grid,
   GridItem,
-  Tag,
   Image,
+  Collapse,
+  CollapseItem,
 } from "@antmjs/vantui";
-import { Collapse, CollapseItem } from "@antmjs/vantui";
-import { add, minus, asyncAdd } from "../../actions/counter";
 import { getUserInfo } from "../../api/user";
 import "./index.scss";
 
