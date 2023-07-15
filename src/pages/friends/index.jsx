@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { View, Button, Text } from '@tarojs/components'
 
 import { add, minus, asyncAdd } from '../../actions/counter'
-import BottomTab from '../../components/bottom_tab'
 import './index.scss'
 
 
@@ -39,7 +38,6 @@ class Friends extends Component {
         <Button className='dec_btn' onClick={this.props.asyncAdd}>async</Button>
         <View><Text>{this.props.counter.num}</Text></View>
         <View><Text>Hello, World</Text></View>
-        {/* <BottomTab /> */}
       </View>
     )
   }

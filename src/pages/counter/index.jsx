@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { View, Button, Text } from '@tarojs/components'
 
 import { add, minus, asyncAdd } from '../../actions/counter'
-import BottomTab from '../../components/bottom_tab'
 import './index.scss'
 
 

@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { View, Text } from "@tarojs/components";
 import { Button } from "@antmjs/vantui";
 import { add, minus, asyncAdd } from "../../actions/counter";
-import BottomTab from "../../components/bottom_tab";
 import "./index.scss";
 
 @connect(
@@ -35,14 +34,14 @@ class Index extends Component {
 
   render() {
     return (
-      <View className="index">
-        <Button className="add_btn" onClick={this.props.add}>
+      <View className='index'>
+        <Button className='add_btn' onClick={this.props.add}>
           +
         </Button>
-        <Button className="dec_btn" onClick={this.props.dec}>
+        <Button className='dec_btn' onClick={this.props.dec}>
           -
         </Button>
-        <Button className="dec_btn" onClick={this.props.asyncAdd}>
+        <Button className='dec_btn' onClick={this.props.asyncAdd}>
           async
         </Button>
         <View>
@@ -51,7 +50,6 @@ class Index extends Component {
         <View>
           <Text>Hello, World</Text>
         </View>
-        {/* <BottomTab /> */}
       </View>
     );
   }
