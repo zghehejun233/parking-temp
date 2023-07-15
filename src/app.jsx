@@ -1,6 +1,7 @@
 import { Component } from 'react'
 import { Provider } from 'react-redux'
 
+import BottomTab from './components/bottom_tab'
 import configStore from './store'
 
 import './app.scss'
