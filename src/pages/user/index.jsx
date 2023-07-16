@@ -2,12 +2,12 @@ import { Component } from "react";
 import { View, Text } from "@tarojs/components";
 import {
   Cell,
-  NavBar,
   Grid,
   GridItem,
   Image,
   Collapse,
   CollapseItem,
+  CellGroup,
 } from "@antmjs/vantui";
 import { getUserInfo } from "../../api/user";
 import "./index.scss";
@@ -26,30 +26,27 @@ class User extends Component {
   render() {
     return (
       <View>
-        <NavBar title='用户' safeAreaInsetTop={false} />
-        {/* <CellGroup inset>
-        <Cell title="单元格" value="内容" />
-        <Cell title="单元格" value="内容" label="描述信息" />
-      </CellGroup> */}
         <View>
-          <Cell
-            center
-            value='内容'
-            isLink
-            renderTitle={
-              <View
-                style={{ display: "flex", alignItems: "center", margin: 12 }}
-              >
-                <Image
-                  round
-                  width={96}
-                  height={96}
-                  src='https://img.yzcdn.cn/vant/cat.jpeg'
-                />
-                <Text>{getUserInfo().nickName}</Text>
-              </View>
-            }
-          />
+          <CellGroup inset>
+            <Cell
+              center
+              value='内容'
+              isLink
+              renderTitle={
+                <View
+                  style={{ display: "flex", alignItems: "center", margin: 12 }}
+                >
+                  <Image
+                    round
+                    width='48px'
+                    height='48px'
+                    src='https://img.yzcdn.cn/vant/cat.jpeg'
+                  />
+                  <Text>{getUserInfo().nickName}</Text>
+                </View>
+              }
+            />
+          </CellGroup>
         </View>
         <View>
           <Collapse accordion>

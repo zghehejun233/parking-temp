@@ -11,22 +11,26 @@ export default defineAppConfig({
       {
         pagePath: 'pages/index/index',
         text: '首页',
-        icon: 'home',
+        iconPath: 'assets/icons/home.png',
+        selectedIconPath: 'assets/icons/home-active.png',
       },
       {
         pagePath: 'pages/counter/index',
         text: '计数',
-        icon: 'counter',
-      },
-      {
-        pagePath: 'pages/user/index',
-        text: '我的',
-        icon: 'user',
+        iconPath: 'assets/icons/map.png',
+        selectedIconPath: 'assets/icons/map-active.png',
       },
       {
         pagePath: 'pages/friends/index',
         text: '朋友',
-        icon: 'friends',
+        iconPath: 'assets/icons/favorite.png',
+        selectedIconPath: 'assets/icons/favorite-active.png',
+      },
+      {
+        pagePath: 'pages/user/index',
+        text: '我的',
+        iconPath: 'assets/icons/user.png',
+        selectedIconPath: 'assets/icons/user-active.png',
       },
     ],
     color: '#333',
@@ -36,7 +40,7 @@ export default defineAppConfig({
   },
   window: {
     backgroundTextStyle: 'light',
-    navigationBarBackgroundColor: '#fff',
+    navigationBarBackgroundColor: '#FFC919',
     navigationBarTitleText: 'WeChat',
     navigationBarTextStyle: 'black'
   }

@@ -1,28 +1,35 @@
-import { useState, useEffect } from "react";
-import { View, Text, Map } from "@tarojs/components";
-import { Popup } from "@antmjs/vantui";
-import "./index.scss";
+import { useState, useEffect } from 'react';
+import { View, Text, Map, CoverView } from '@tarojs/components';
+import { Popup, Sticky } from '@antmjs/vantui';
+import SearchBar from '../../components/search_bar';
+import PopupOrder from '../../components/popup_order';
+import './index.scss';
 
 function Index() {
   const [show, setShow] = useState(false);
-  const [markers, setmarkers] = useState([]);
+  const [markers, setMarkers] = useState([]);
+
   useEffect(() => {
-    setmarkers([
+    setShow(true);
+  }, []);
+
+  useEffect(() => {
+    setMarkers([
       {
         id: 0,
         longitude: 113.32452,
         latitude: 23.099994,
-        iconPath: "/image/location.png",
+        iconPath: '/image/location.png',
         width: 50,
         height: 50,
         callout: {
-          content: "我在这里",
-          color: "#000",
+          content: '我在这里',
+          color: '#000',
           fontSize: 16,
           borderRadius: 10,
-          bgColor: "#fff",
+          bgColor: '#fff',
           padding: 10,
-          display: "ALWAYS",
+          display: 'ALWAYS',
         },
       },
     ]);
@@ -31,35 +38,32 @@ function Index() {
   return (
     <View>
       <Map
-        width='800px'
-        id='map'
-        longitude='113.324520'
-        latitude='23.099994'
-        scale='14'
+        width="800px"
+        id="map"
+        longitude="113.324520"
+        latitude="23.099994"
+        scale="14"
         markers={markers}
-        onMarkerTap={() => {
-          console.log("点击");
-          setShow(true);
-        }}
         onCalloutTap={() => {
-          console.log("点击");
+          console.log('点击');
           setShow(true);
+          console.log('Current show:', show);
         }}
-        onLabelTap={() => {
-          console.log("点击");
-          setShow(true);
-        }}
-        style={{ width: "100%", height: "calc(100vh - 50px)" }}
-      />
-      <Popup
-        show={show}
-        position='bottom'
-        onClose={() => {
-          setShow(false);
-        }}
+        style={{ width: '100vw', height: '100vh' }}
       >
-        <Text>内容</Text>
-      </Popup>
+        <CoverView
+          style={{
+            position: 'absolute',
+            top: '16px',
+            width: '100vw',
+            padding: '0 16px 16px 0',
+          }}
+        >
+          {' '}
+          <SearchBar />
+        </CoverView>
+      </Map>
+      <PopupOrder show={show} />
     </View>
   );
 }
