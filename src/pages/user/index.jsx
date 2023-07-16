@@ -37,9 +37,8 @@ class User extends Component {
                   style={{ display: 'flex', alignItems: 'center', margin: 12 }}
                 >
                   <Image
+                    id='avatar'
                     round
-                    width="48px"
-                    height="48px"
                     src="https://img.yzcdn.cn/vant/cat.jpeg"
                   />
                   <Text>{getUserInfo().nickName}</Text>
