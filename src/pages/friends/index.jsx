@@ -15,28 +15,28 @@ function Friends() {
   const mockGoods = () => {
     const initData = [
       {
-        image: "https://img.yzcdn.cn/vant/cat.jpeg",
-        title:
-          "中老年羽绒服男冬季爸爸装薄短款白鸭绒中年人男士保暖外套男装 夜空黑 L【建议115斤以内】",
-        price: "¥165.00",
+        avatar: 'https://img.yzcdn.cn/vant/cat.jpeg',
+        username: 'John Doe',
+        content: '这是一条示例帖子内容。',
+        postTime: '2023-07-18 14:30:00',
+        likes: 10,
       },
       {
-        image: "https://img.yzcdn.cn/vant/cat.jpeg",
-        title: "HLA海澜之家马丁靴男士高帮男靴复古工装鞋",
-        price: "¥361.00",
+        avatar: 'https://img.yzcdn.cn/vant/cat.jpeg',
+        username: 'Jane Smith',
+        content: '这是另一条示例帖子内容。',
+        postTime: '2023-07-17 10:15:00',
+        likes: 5,
       },
       {
-        image: "https://img.yzcdn.cn/vant/cat.jpeg",
-        title:
-          "洁丽雅拖鞋男夏浴室洗澡防滑家居室内EVA大码男士凉拖鞋居家用夏季防臭 灰色 41-42【标准码】",
-        price: "¥22.50",
-      },
-      {
-        image: "https://img.yzcdn.cn/vant/cat.jpeg",
-        title: "夏季新款男士T恤宽松气质高端百搭时尚短袖体恤潮牌",
-        price: "¥212.00",
+        avatar: 'https://img.yzcdn.cn/vant/cat.jpeg',
+        username: 'Bob Johnson',
+        content: '这是第三条示例帖子内容。',
+        postTime: '2023-07-16 13:45:00',
+        likes: 3,
       },
     ];
+
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve(
@@ -44,7 +44,6 @@ function Friends() {
             return {
               index,
               ...initData[index % 4],
-              isCutPrice: index % 2 === 0 ? true : false,
             };
           })
         );
@@ -109,16 +108,15 @@ function Friends() {
             ItemRender={({ index, item, className, ...props }) => {
               return (
                 <View
-                  className={`van-demo-goods-item-wrapper ${className}`}
+                  className={`bd-moment-post-wrapper ${className}`}
                   {...props}
                 >
-                  <View className='van-demo-goods-item'>
-                    <TaroImage src={item.image} className='img' />
-                    <View className='title'>{item.title}</View>
-                    {item.isCutPrice && (
-                      <Text className='cutPrice'>最近大降价</Text>
-                    )}
-                    <View className='price'>{item.price}</View>
+                  <View className='bd-moment-post'>
+                    <TaroImage src={item.avatar} className='img' />
+                    <View className='username'>{item.username}</View>
+                    <View className='content'>{item.content}</View>
+                    <View className='postTime'>{item.postTime}</View>
+                    <View className='likes'>{item.likes}</View>
                   </View>
                 </View>
               );
