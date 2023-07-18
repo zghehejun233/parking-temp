@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from "react";
+import React, { useCallback, useState } from "react";
 import { View, Image as TaroImage, Text } from "@tarojs/components";
 import {
   PullToRefresh,
@@ -112,11 +112,17 @@ function Friends() {
                   {...props}
                 >
                   <View className='bd-moment-post'>
-                    <TaroImage src={item.avatar} className='img' />
-                    <View className='username'>{item.username}</View>
-                    <View className='content'>{item.content}</View>
-                    <View className='postTime'>{item.postTime}</View>
-                    <View className='likes'>{item.likes}</View>
+                    <View className="bd-moment-post__header">
+                      <TaroImage src={item.avatar} className='img' />
+                      <View className='username'>{item.username}</View>
+                    </View>
+                    <View className='bd-moment-post__body'>
+                      <View className='content'>{item.content}</View>
+                    </View>
+                    <View className='bd-moment-post__footer'>
+                      <View className='postTime'>{item.postTime}</View>
+                      <View className='likes'>{item.likes}</View>
+                    </View>
                   </View>
                 </View>
               );
