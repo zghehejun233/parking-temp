@@ -5,7 +5,7 @@ export function getUserInfo() {
         "nickName": "狗蛋",
         "sex": 1,
         "quote": "我是狗蛋",
-        "avatarUrl": "https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGT",
+        "avatarUrl": "https://img.yzcdn.cn/vant/cat.jpeg",
         "city": "广州",
         "automobile": "奔驰",
         "age": 18,

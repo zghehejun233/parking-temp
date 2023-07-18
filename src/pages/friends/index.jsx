@@ -1,4 +1,4 @@
-import react from "react";
+import React, {useCallback, useState} from "react";
 import { View, Image as TaroImage, Text } from "@tarojs/components";
 import {
   PullToRefresh,
@@ -7,9 +7,11 @@ import {
   Sticky,
 } from "@antmjs/vantui";
 import "./index.scss";
+import { getUserInfo } from '../../api/user';
 
 function Friends() {
-  const [data, setdata] = react.useState([]);
+  const [data, setdata] = React.useState([]);
+  const [isRefreshing, setIsRefreshing] = useState(false);
   const mockGoods = () => {
     const initData = [
       {
@@ -50,8 +52,8 @@ function Friends() {
     });
   };
 
-  const InfiniteScrollRef = react.useRef();
-  const VirtualListRef = react.useRef();
+  const InfiniteScrollRef = React.useRef();
+  const VirtualListRef = React.useRef();
 
   const loadMore = async () => {
     return new Promise(async (resolve) => {
@@ -75,7 +77,19 @@ function Friends() {
   return (
     <View>
       <Sticky zIndex={-1}>
-        <TaroImage src='https://img.yzcdn.cn/vant/cat.jpeg' />
+        <View style={{ position: "relative" }}>
+          <TaroImage
+            src={getUserInfo().avatarUrl}
+            style={{
+              width: "50px",
+              height: "50px",
+              borderRadius: "5px",
+              position: "absolute",
+              bottom: "10px",
+              right: "10px"
+            }} />
+          <View style={{ height: "150px", backgroundColor: "#ccc" }} />
+        </View>
       </Sticky>
       <View style={{ height: "calc(100vh - 50px)" }}>
         <PullToRefresh onRefresh={onRefresh}>
