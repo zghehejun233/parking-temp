@@ -12,8 +12,29 @@ import { getUserInfo } from '../../api/user';
 function Friends() {
   const [data, setdata] = React.useState([]);
   const [isRefreshing, setIsRefreshing] = useState(false);
-  const mockGoods = () => {
+  const mockData = () => {
     const initData = [
+      {
+        avatar: 'https://img.yzcdn.cn/vant/cat.jpeg',
+        username: 'Shinohara Haruna',
+        content: '前端太苦逼，我绷不住了',
+        postTime: '2023-07-16 13:45:00',
+        likes: 114514,
+      },
+      {
+        avatar: 'https://img.yzcdn.cn/vant/cat.jpeg',
+        username: '郭硕导',
+        content: '钱还没定，先意思意思（',
+        postTime: '2023-07-16 13:45:00',
+        likes: 1919810,
+      },
+      {
+        avatar: 'https://img.yzcdn.cn/vant/cat.jpeg',
+        username: '董叔',
+        content: '确实 前端不好写',
+        postTime: '2023-07-16 13:45:00',
+        likes: 2147483648,
+      },
       {
         avatar: 'https://img.yzcdn.cn/vant/cat.jpeg',
         username: 'John Doe',
@@ -56,7 +77,7 @@ function Friends() {
 
   const loadMore = async () => {
     return new Promise(async (resolve) => {
-      const result = await mockGoods();
+      const result = await mockData();
       const newData = data.concat(result);
       setdata(newData);
       resolve(newData.length > 110 ? "complete" : "loading");
@@ -66,7 +87,7 @@ function Friends() {
   const onRefresh = async () => {
     return new Promise(async (resolve) => {
       InfiniteScrollRef.current?.reset();
-      const result = await mockGoods();
+      const result = await mockData();
       await VirtualListRef.current?.reset(result);
       setdata(result);
       resolve(undefined);
