@@ -2,8 +2,9 @@
 export default defineAppConfig({
   pages: [
     'pages/index/index',
-    'pages/counter/index',
+    'pages/orders/index',
     'pages/user/index',
+    'pages/order_detail/index',
     'pages/friends/index',
   ],
   tabBar: {
@@ -15,8 +16,8 @@ export default defineAppConfig({
         selectedIconPath: 'assets/icons/home-active.png',
       },
       {
-        pagePath: 'pages/counter/index',
-        text: '计数',
+        pagePath: 'pages/orders/index',
+        text: '订单',
         iconPath: 'assets/icons/map.png',
         selectedIconPath: 'assets/icons/map-active.png',
       },
@@ -42,6 +43,5 @@ export default defineAppConfig({
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#FFC919',
     navigationBarTitleText: 'WeChat',
-    navigationBarTextStyle: 'black'
   }
 })
