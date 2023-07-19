@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 import { View, Image as TaroImage, Text } from "@tarojs/components";
 import {
   PullToRefresh,
@@ -68,7 +68,7 @@ function Friends() {
             };
           })
         );
-      }, 1400);
+      }, 200);
     });
   };
 

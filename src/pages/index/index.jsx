@@ -10,7 +10,7 @@ function Index() {
   const [markers, setMarkers] = useState([]);
 
   useEffect(() => {
-    setShow(true);
+    setShow(false);
   }, []);
 
   useEffect(() => {
