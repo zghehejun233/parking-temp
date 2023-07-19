@@ -38,29 +38,29 @@
 .divide{
   background: gainsboro;
   width: 100%;
-  height: 5px;
+  height: 7px;
 }
 
 .container{
   height: 100%;
-  background: gainsboro;
+ 
 }
 
 .button1{
     border: none;
-    background: gold;
+    background-color: #ffd700;
     width: 100%;
     height: 50%;
     border-radius: 30px;
-    display: inline; /* 将块级元素变为行级元素 */
+    margin: 10px;
 }
 .button2{
-  border:solid 4px gray;
-  background: white;
-  width: 100%;
-  height: 50%;
-  border-radius: 30px;
-  display: inline; /* 将块级元素变为行级元素 */
+    border:solid 4px #808080;
+    background-color: #ffffff;
+    width: 100%;
+    height: 50%;
+    border-radius: 30px;
+    margin: 10px;
 }
 .buttonContainer{
   height: 30%;
@@ -73,10 +73,20 @@
 .logo{
   float:left;
   margin: 10px;
-  background: gold;
+  background: #ffd700;
   border-radius: 50px;
   width: 100px;
   height: 100px;
+}
+.logo2{
+  float:left;
+  margin: 10px;
+  background: #ffd700;
+  border-radius: 150px;
+  width: 200px;
+  height: 200px;
+  font-size: 150px;
+  color: #ffffff;
 }
 .info{
   float:right;
@@ -95,3 +105,4 @@
   height: 45%;
   background: white;
 }
+
