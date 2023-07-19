@@ -5,6 +5,7 @@ export default defineAppConfig({
     'pages/counter/index',
     'pages/user/index',
     'pages/friends/index',
+    'pages/newPi/index',
   ],
   tabBar: {
     list: [
@@ -29,6 +30,12 @@ export default defineAppConfig({
       {
         pagePath: 'pages/user/index',
         text: '我的',
+        iconPath: 'assets/icons/user.png',
+        selectedIconPath: 'assets/icons/user-active.png',
+      },
+      {
+        pagePath: 'pages/newPi/index',
+        text: '新的切面',
         iconPath: 'assets/icons/user.png',
         selectedIconPath: 'assets/icons/user-active.png',
       },
