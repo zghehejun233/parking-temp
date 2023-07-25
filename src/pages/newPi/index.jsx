@@ -13,9 +13,9 @@ function Body(){
     <View className={'bodyContainer'}>
       <View className={'innerContainer1'} style={{paddingTop:"30px"}}>
           {/*这个标签以及内部是个标签,因为暂时没有素材所以用css整了个,后面换成图片就行*/}
-          <View className={'cen mid'} style={{position:"relative",left: "50%",
+          <View className={'cen mid '} style={{position:"relative",left: "50%",
             transform:" translateX(-50%)",width:"120px",height:"120px"}}>
-            <View className={'logo2 cen mid'}> <Text>√</Text>
+            <View className={'logo2 cen mid bgcolor3'}> <Text>√</Text>
           </View>
           {/*对就是上面的部分*/}
           </View>
@@ -25,7 +25,7 @@ function Body(){
       <View className={'divide'}/>
       <View className={'innerContainer2'}>
         <View className={'infoContainer buzhidaoganshad'}>
-          <View  style={{fontSize:"25px"}} className={'logo cen mid'}> <Text>P</Text>
+          <View  style={{fontSize:"25px"}} className={'logo cen mid bgcolor3'}> <Text>P</Text>
           </View>
           <View className={'info'}>
                <View className={'infoElement'}>
@@ -44,16 +44,13 @@ function Body(){
           </View>
         </View>
         <View className={'buttonContainer buzhidaoganshad'}>
-        <Button className={'button1 mid cen'} style={{color:'white'}}   loading-text="ing">
+        <Button className={'button1 mid cen bgcolor3'} style={{color:'white'}}   loading-text="ing">
           购买停车位
         </Button>
-        <Button className={'button2 mid cen NameOrTitle'}  loading-text="ing">
+        <Button className={'button2 mid cen NameOrTitle bgcolor3'}  loading-text="ing">
           我再康康
         </Button>
-
-        
         </View>
-
       </View>
     </View>
   )

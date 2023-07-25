@@ -4,6 +4,7 @@ import { Popup, Sticky } from '@antmjs/vantui';
 import SearchBar from '../../components/search_bar';
 import PopupOrder from '../../components/popup_order';
 import './index.scss';
+import '../../app.scss'
 
 function Index() {
   const [show, setShow] = useState(false);
@@ -49,10 +50,10 @@ function Index() {
           setShow(true);
           console.log('Current show:', show);
         }}
-        className={'sizeOfMap'}
+        className={'sizeOfMap imgAndMapGray'}
       >
         <CoverView
-          className={'cssOfCoverView'}
+          className={'cssOfCoverView '}
         >
           {' '}
           <SearchBar />

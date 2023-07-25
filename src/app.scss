@@ -9,11 +9,36 @@
 .gray-Font{ color:darkgrey;}  //深灰
 .timeColor{ color: #666}      //时间,地点常用颜色
 //一套颜色
-.NameOrTitle{  color: #9B8300;}  //名称或者标题
+/*
+.NameOrTitle{  color: #9B8300;}  //名称或者ss标题
 .likeColor{color: #C6A700}    //点赞颜色
-.backGroundColor{color: #C6A700}    //背景颜色:金黄色
+.backGroundColor{color: #ffd700}    //背景颜色:金黄色
 .lightgold{color: #FFE039}      //轻的金色
 .whiteGold{color:#FFE764}      //很接近白色的金色了
+//一套背景颜色
+.bgcolor1{background-color: #9B8300;}
+.bgcolor2{background-color: #A28900}    
+.bgcolor3{background-color: #ffd700}
+*/
 
 
-//距离产生美
+//灰白色调
+.NameOrTitle{  color: #1A1A1A;}  //名称或者ss标题
+.likeColor{color: #595959}    //点赞颜色
+.backGroundColor{color: #898989}    //背景颜色:金黄色
+.lightgold{color: #B5B5B5}      //轻的金色
+.whiteGold{color:#E6E6E6}      //很接近白色的金色了
+//一套背景颜色
+.bgcolor1{background-color: #1A1A1A;}
+.bgcolor2{background-color: #595959}    
+.bgcolor3{background-color: #898989}   
+.imgAndMapGray{
+  filter: grayscale(80%)
+} 
+
+
+//上面确实设计了颜色,但是下面这个实行起来更方便点,就是缺一些对比度
+//改上面,和给组件加上这个都行,css已经调好了
+.gray-out{
+  filter: grayscale(100%)
+}

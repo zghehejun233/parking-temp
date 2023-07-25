@@ -108,7 +108,7 @@ function Friends() {
         <View style={{ position: "relative" }}>
           <TaroImage
             src={getUserInfo().avatarUrl}
-            className={'sizeOfImg'} />
+            className={'sizeOfImg imgAndMapGray'} />
           <View style={{ height: "150px", backgroundColor: "#ccc" }} />
         </View>
       </Sticky>
@@ -135,7 +135,7 @@ function Friends() {
                 >
                   <View className='bd-moment-post'>
                     <View className="bd-moment-post__header">
-                      <TaroImage src={item.avatar} className='img' />
+                      <TaroImage src={item.avatar} className='img imgAndMapGray' />
                       <View className='username NameOrTitle'>{item.username}</View>
                     </View>
                     <View className='bd-moment-post__body'>

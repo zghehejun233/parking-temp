@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { View } from "@tarojs/components";
 import icons from "@vant/icons";
 import { Popup, Button, Sticky, Field } from "@antmjs/vantui";
+import '../app.scss'
 
 export default function SearchBar() {
   const [value, setValue] = useState("");
@@ -26,10 +27,9 @@ export default function SearchBar() {
           }}
         />
         <Button
-          //   美团的黄色
-          color="#FFC919"
           icon="search"
           round
+          className={'bgcolor3'}
           style={{ width: "48px" }}
         />
       </View>

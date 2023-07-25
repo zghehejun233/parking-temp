@@ -42,8 +42,9 @@ class User extends Component {
                     id='avatar'
                     round
                     src="https://img.yzcdn.cn/vant/cat.jpeg"
+                    className='imgAndMapGray'
                   />
-                  <Text>{getUserInfo().nickName}是zzy</Text>
+                  <Text>{getUserInfo().nickName}</Text>
                 </View>
               }
             />

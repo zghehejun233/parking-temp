@@ -12,7 +12,7 @@ export default function OrderDetail() {
   return (
     <View className="stack-container">
       <View className="background">
-        <View className={'infoOfTimeContainer'} >
+        <View className={'infoOfTimeContainer  bgcolor3'} >
           <View className={'infoOfTime'} >
             <Text    style={{ fontSize: '64px'   }} >
               01
@@ -33,16 +33,16 @@ export default function OrderDetail() {
         </View>
         <View  className={'carBoardContainer'}  >
           <View
-            className="foreground"
+            className="foreground imgAndMapGray"
             style={{
               marginTop: '-20px',
               zIndex: '99',
             }}
           >
-            <Text className={'carBoard'} > 鲁A·12345 </Text>
+            <Text className={'carBoard '} > 鲁A·12345 </Text>
           </View>
         </View>
-        <View className={'infoContainer'} >
+        <View className={'infoContainer imgAndMapGray'} >
           <Icon name="location-o" size="96" color="#FFC919" />
           <View  className={'detailInformation'}  >
             <Text>停车地点：美莲广场</Text>
@@ -64,10 +64,10 @@ export default function OrderDetail() {
         </View>
         <View style={{   width: '80%',   margin: '0 auto'}} >
           <Button
-            color="#FFC919"
             size="large"
             type="default"
             style={{color: '#000'}}
+            className={'bgcolor3'}
           >
             结束停车/支付
           </Button>
