@@ -11,6 +11,7 @@ import {
 } from '@antmjs/vantui';
 import { getUserInfo } from '../../api/user';
 import './index.scss';
+import '../../app.scss'
 
 class User extends Component {
   componentWillReceiveProps(nextProps) {
@@ -35,13 +36,14 @@ class User extends Component {
               renderTitle={
                 <View
                   style={{ display: 'flex', alignItems: 'center', margin: 12 }}
+                  className={'NameOrTitle middle-FontSize'}
                 >
                   <Image
                     id='avatar'
                     round
                     src="https://img.yzcdn.cn/vant/cat.jpeg"
                   />
-                  <Text>{getUserInfo().nickName}</Text>
+                  <Text>{getUserInfo().nickName}是zzy</Text>
                 </View>
               }
             />
@@ -53,17 +55,11 @@ class User extends Component {
             marginTop: '10px',
           }}
         >
-          <Text
-            style={{
-              fontSize: '16px',
-              fontWeight: 'bold',
-              padding: '10px 0 10px 10px',
-            }}
-          >
+          <Text  className={'titleOfUser NameOrTitle '} >
             我的车辆
           </Text>
           <Collapse accordion>
-            <CollapseItem title="鲁A12345" name="1">
+            <CollapseItem title="🚗鲁A12345" name="1">
               <View>
                 <Cell title="车牌号" value="鲁A12345" />
                 <Cell title="车辆类型" value="小型汽车" />
@@ -72,7 +68,7 @@ class User extends Component {
                 <Cell title="车辆颜色" value="白色" />
               </View>
             </CollapseItem>
-            <CollapseItem title="鲁A23456" name="2">
+            <CollapseItem title="🚗鲁A23456" name="2">
               <View>
                 <Cell title="车牌号" value="鲁A23456" />
                 <Cell title="车辆类型" value="小型汽车" />
@@ -81,7 +77,7 @@ class User extends Component {
                 <Cell title="车辆颜色" value="白色" />
               </View>
             </CollapseItem>
-            <CollapseItem title="鲁A34567" name="3">
+            <CollapseItem title="🚗鲁A34567" name="3">
               <View>
                 <Cell title="车牌号" value="鲁A34567" />
                 <Cell title="车辆类型" value="小型汽车" />
@@ -98,13 +94,7 @@ class User extends Component {
             marginTop: '10px',
           }}
         >
-          <Text
-            style={{
-              fontSize: '16px',
-              fontWeight: 'bold',
-              padding: '10px 0 10px 10px',
-            }}
-          >
+          <Text   className={'titleOfUser NameOrTitle '} >
             更多功能
           </Text>
           <Grid
@@ -113,6 +103,7 @@ class User extends Component {
             border={false}
             gutter={0}
             iconSize="32px"
+            className={'likeColor'}
           >
             <GridItem icon="chat-o" text="文字" />
             <GridItem icon="photo-o" text="图片" />

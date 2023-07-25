@@ -16,12 +16,12 @@
         width: 75px;
         height: 75px;
         margin-right: 10px;
+        border-radius: 17px;
       }
 
       .username {
         font-weight: bold;
         font-size: 40px;
-        color: #2883f2;
       }
     }
 
@@ -44,14 +44,24 @@
       .likes {
         margin-left: auto;
         font-size: 32px;
-        color: #2883f2;
       }
 
       .postTime {
         margin-right: 10px;
-        color: #666;
         font-size: 26px;
       }
     }
   }
+}
+.sizeOfImg{
+  width: 150px;
+  height: 150px;
+  border-radius: 25px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.cssOfVirtualList{
+  padding: 10;
+  box-sizing: border-box;
 }

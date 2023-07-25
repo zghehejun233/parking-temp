@@ -7,6 +7,7 @@ import {
   Sticky,
 } from "@antmjs/vantui";
 import "./index.scss";
+import '../../app.scss'
 import { getUserInfo } from '../../api/user';
 
 function Friends() {
@@ -14,6 +15,13 @@ function Friends() {
   const [isRefreshing, setIsRefreshing] = useState(false);
   const mockData = () => {
     const initData = [
+      {
+        avatar: 'https://img.yzcdn.cn/vant/cat.jpeg',
+        username: 'XarNud Vilas',
+        content: '这tm哥们也不敢乱扣啊',
+        postTime: '2023-07-16 13:45:00',
+        likes: 114514,
+      },
       {
         avatar: 'https://img.yzcdn.cn/vant/cat.jpeg',
         username: 'Shinohara Haruna',
@@ -100,21 +108,14 @@ function Friends() {
         <View style={{ position: "relative" }}>
           <TaroImage
             src={getUserInfo().avatarUrl}
-            style={{
-              width: "50px",
-              height: "50px",
-              borderRadius: "5px",
-              position: "absolute",
-              bottom: "10px",
-              right: "10px"
-            }} />
+            className={'sizeOfImg'} />
           <View style={{ height: "150px", backgroundColor: "#ccc" }} />
         </View>
       </Sticky>
       <View style={{ height: "calc(100vh - 50px)" }}>
         <PullToRefresh onRefresh={onRefresh}>
           <VirtualList
-            style={{ padding: 10, boxSizing: "border-box" }}
+           className={'cssOfVirtualList'}
             height='calc(100vh - 50px)'
             dataSource={data}
             showCount={3}
@@ -135,14 +136,14 @@ function Friends() {
                   <View className='bd-moment-post'>
                     <View className="bd-moment-post__header">
                       <TaroImage src={item.avatar} className='img' />
-                      <View className='username'>{item.username}</View>
+                      <View className='username NameOrTitle'>{item.username}</View>
                     </View>
                     <View className='bd-moment-post__body'>
                       <View className='content'>{item.content}</View>
                     </View>
                     <View className='bd-moment-post__footer'>
-                      <View className='postTime'>{item.postTime}</View>
-                      <View className='likes'>{item.likes}</View>
+                      <View className='postTime timeColor'>{item.postTime}</View>
+                      <View className='likes likeColor'>👍{item.likes}</View>
                     </View>
                   </View>
                 </View>

@@ -5,6 +5,7 @@ import { Tabs, Tab, VirtualList, InfiniteScroll } from '@antmjs/vantui';
 import { add, minus, asyncAdd } from '../../actions/counter';
 import OrderList  from '../../components/order_list';
 import './index.scss';
+import '../../app.scss'
 
 export default function Orders() {
   const [data, setData] = useState([]);

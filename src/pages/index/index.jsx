@@ -49,15 +49,10 @@ function Index() {
           setShow(true);
           console.log('Current show:', show);
         }}
-        style={{ width: '100vw', height: '100vh' }}
+        className={'sizeOfMap'}
       >
         <CoverView
-          style={{
-            position: 'absolute',
-            top: '16px',
-            width: '100vw',
-            padding: '0 16px 16px 0',
-          }}
+          className={'cssOfCoverView'}
         >
           {' '}
           <SearchBar />

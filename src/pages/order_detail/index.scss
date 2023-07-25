@@ -34,3 +34,66 @@
   letter-spacing: 12px;
   background-color: #126be7;
 }
+
+.detailInformation{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin-left: 20px;
+   font-size: 28px;
+   line-height: 56px;
+   letter-spacing: 1px;
+}
+.cost{
+  font-size: 72px;
+  margin-bottom: 12px;
+}
+.costContainer{
+    height: 72px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.infoContainer{
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  margin-top: 80px;
+  margin-left: 70px;
+}
+.carBoard{
+  font-size: 72px;
+  font-weight: bold;
+  color: #fff;
+}
+.carBoardContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 2px;
+}
+.infoOfTime{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 20px;
+  width: 80%;
+  font-size: 36px;
+}
+.infoOfTimeContainer{
+  height: 24vh;
+  background-color: #FFC919;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 4px;
+}
+.divide{
+  height: 2px;
+  background-color: rgb(224, 219, 189);
+  margin-top: 4px;
+  margin-bottom: 4px;
+}

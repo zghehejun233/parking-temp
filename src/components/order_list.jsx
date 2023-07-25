@@ -10,6 +10,7 @@ import {
   CellGroup,
   Icon,
 } from '@antmjs/vantui';
+import '../app.scss';
 
 export default function OrderList() {
   const [data, setdata] = React.useState([]);
@@ -150,7 +151,7 @@ export default function OrderList() {
                       }
                       renderLabel={
                         <View>
-                          <Text>{item.location + item.carport}</Text>
+                          <Text className={'NameOrTitle'}>{item.location + item.carport}</Text>
                         </View>
                       }
                     />

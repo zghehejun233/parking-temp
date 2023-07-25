@@ -25,6 +25,7 @@ export default defineAppConfig({
       {
         pagePath: 'pages/friends/index',
         text: '朋友',
+    
         iconPath: 'assets/icons/favorite.png',
         selectedIconPath: 'assets/icons/favorite-active.png',
       },
